@@ -23,3 +23,4 @@ EOF
 echo "Done"
 echo "Restart service"
 systemctl restart wazo-dird-phoned
+echo "Done, All is Good - Bye"
