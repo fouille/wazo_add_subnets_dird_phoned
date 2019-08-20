@@ -15,9 +15,9 @@ echo "1/3 - Create file"
 
 touch /etc/wazo-dird-phoned/conf.d/010-subnets.yml
 cat > /etc/wazo-dird-phoned/conf.d/010-subnets.yml <<'EOF'
-debug: ${2}
+debug: $2
 rest_api:
-  authorized_subnets: ["${1}"]
+  authorized_subnets: ["$1"]
 EOF
 
 echo "Done"
