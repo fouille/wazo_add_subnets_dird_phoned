@@ -2,7 +2,7 @@
 usage() {
     cat >&2 <<EOF
 Usage: $0 <Subnet address/xx or Subnets address/xx,address/xx> <debug yes/no>
-Add subnets to access dird-phoned with physical phone
+Add subnets to access dird-phoned with physical phone, works only with UCEngine >= 19.11
 EOF
         exit 1
 }
@@ -20,5 +20,6 @@ debug: ${DEBUG}
 rest_api:
   authorized_subnets: ["${IP}"]
 EOF
-
 echo "Done"
+echo "Restart service"
+systemctl restart wazo-dird-phoned
