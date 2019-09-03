@@ -1,7 +1,7 @@
 # wazo_add_subnets_dird_phoned
 add subnets in wazo-dird-phoned for access directory with physical phone 
 
-<strong>INFO</strong> : Work only Wazo UC Engine >= 19.11
+<strong>INFO</strong> : Work only Wazo UC Engine >= 19.12
 
 # Usage single subnet
 
@@ -29,7 +29,7 @@ foo@bar:~$  ./add_subnets.sh "10.10.10.10/24, 1.1.1.1/24" yes
 
 # Result File 
 
-<strong>Write file</strong> : <code>/etc/wazo-dird-phoned/conf.d/010-subnets.yml</code><br>
+<strong>Write file</strong> : <code>/etc/wazo-dird/conf.d/010-subnets.yml</code><br>
 <br>
 ```data
 debug: yes
