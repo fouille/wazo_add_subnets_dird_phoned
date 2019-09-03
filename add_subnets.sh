@@ -18,7 +18,7 @@ touch /etc/wazo-phoned/conf.d/010-subnets.yml
 cat > /etc/wazo-phoned/conf.d/010-subnets.yml <<EOF
 debug: ${DEBUG}
 rest_api:
-  authorized_subnets: ["${IP}"]
+  authorized_subnets: [${IP}]
 EOF
 echo "Done"
 echo "Restart service"
