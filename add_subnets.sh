@@ -14,13 +14,13 @@ fi
 echo "Create/Update file ${1} ${2}"
 DEBUG="${2}"
 IP="${1}"
-touch /etc/wazo-dird-phoned/conf.d/010-subnets.yml
-cat > /etc/wazo-dird-phoned/conf.d/010-subnets.yml <<EOF
+touch /etc/wazo-phoned/conf.d/010-subnets.yml
+cat > /etc/wazo-phoned/conf.d/010-subnets.yml <<EOF
 debug: ${DEBUG}
 rest_api:
   authorized_subnets: ["${IP}"]
 EOF
 echo "Done"
 echo "Restart service"
-systemctl restart wazo-dird-phoned
+systemctl restart wazo-phoned
 echo "Done, All is Good - Bye"
